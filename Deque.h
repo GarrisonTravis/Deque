@@ -1,3 +1,6 @@
+//Deque.h
+//Garrison Travis
+#ifndef DEQUE_H
 #define DEQUE_H
 #include "Node.h"
 
@@ -11,6 +14,8 @@ private:
 public:
 	Deque();
 	Deque(Type);
+	~Deque();
+
 	int getSize();
 	bool empty();
 	
@@ -22,6 +27,8 @@ public:
 
 	Type front();
 	Type back();
+
+	void clear();
 
 	void print();
 };
