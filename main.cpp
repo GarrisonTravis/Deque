@@ -7,6 +7,8 @@
 int main() {
     
     //Testing Deque initialized with parameterized constructor
+    cout << "Testing first deque: push_front, push_back, pop_front, pop_back, getSize, front, and back" << endl;
+    cout << "-----------------------------------------------------------------------------------------" << endl;
     Deque<int> deq1(3);
     deq1.print();
     cout << "Size: " << deq1.getSize() << endl;
@@ -80,4 +82,18 @@ int main() {
     catch (exception & e) {
         cout << "Exception Caught. " << e.what() << endl;
     }
+
+    cout << "\nTesting second deque: clear" << endl;
+    cout << "------------------" << endl;
+    Deque<int> deq2;
+    deq2.push_back(1);
+    deq2.push_back(2);
+    deq2.push_back(3);
+    deq2.push_back(4);
+    deq2.push_back(5);
+    deq2.print();
+
+    cout << "Clearing Deque ..." << endl;
+    deq2.clear();
+    deq2.print();
 }
