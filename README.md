@@ -13,6 +13,7 @@ Operations:
   - pop_back
   - front
   - back
+  - clear
   - print
   
   Property of Garrison Travis
