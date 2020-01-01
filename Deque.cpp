@@ -20,6 +20,12 @@ Deque<Type>::Deque(Type val) {
 	size = 1;
 }
 
+//Destructor
+template <class Type>
+Deque<Type>::~Deque() {
+	Deque<Type>::clear();
+}
+
 //Returns the size of the Deque
 template <class Type>
 int Deque<Type>::getSize() {
@@ -146,6 +152,19 @@ Type Deque<Type>::back() {
 	if (empty())
 		throw runtime_error("The Deque is Empty! Last Doesn't Exist.");
 	return last->val;
+}
+
+//Deallocates and deletes every node in the Deque
+//Post: Empty Deque
+template <class Type>
+void Deque<Type>::clear() {
+	Node<Type>* current = first;
+
+	while (current) {
+		first = current->next;
+		delete current;
+		current = first;
+	}
 }
 
 //Outputs the current Deque to the screen
