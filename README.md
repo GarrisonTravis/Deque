@@ -16,4 +16,3 @@ Operations:
   - clear      O(n)
   - print      O(n)
   
-  Property of Garrison Travis
